@@ -1,12 +1,14 @@
 <<<<<<< HEAD
 #include<stdio.h>
 int secondhighest(int m[],int n){  
-    long long max=m[0],smax;   
+    int max=m[0],smax=-1;   
     for(int i=0;i<n;i++){
         if(m[i]>max){
             smax=max;
             max=m[i];
-        }       
+        } 
+        else if(m[i]<max && m[i]>smax){
+            smax =m[i];
     }
     printf("max: %lld\n",max);
     printf("second max: %lld\n",smax);
